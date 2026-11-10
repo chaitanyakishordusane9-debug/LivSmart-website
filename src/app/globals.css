@@ -8,7 +8,7 @@
   --color-livsmart-stone: #A9A39B;
   --color-livsmart-white: #FFFFFF;
 
-  --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
 }
 
 :root {

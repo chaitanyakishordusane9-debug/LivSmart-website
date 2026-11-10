@@ -1,18 +1,10 @@
 import type { Metadata } from "next";
-import { Manrope } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { FloatingWhatsApp } from "@/components/layout/FloatingWhatsApp";
 import { BUSINESS_INFO } from "@/data/business";
 import { SERVICES_DATA } from "@/data/services";
-
-const manrope = Manrope({
-  subsets: ["latin"],
-  variable: "--font-manrope",
-  display: "swap",
-  weight: ["400", "500", "600", "700", "800"],
-});
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://livsmart.in";
 
@@ -113,7 +105,19 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className={manrope.variable}>
+    <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body className="min-h-screen flex flex-col font-sans antialiased bg-[#F5F3EF] text-[#191919] selection:bg-[#E8792E] selection:text-white">
         <script
           type="application/ld+json"

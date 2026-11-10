@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { SERVICES_DATA } from "@/data/services";
-import { ALL_PROJECTS } from "@/data/projects";
+import { getAllProjects } from "@/data/projects";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://livsmart.in";
@@ -76,7 +76,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }));
 
-  const projectRoutes: MetadataRoute.Sitemap = ALL_PROJECTS.map((project) => ({
+  const projectRoutes: MetadataRoute.Sitemap = getAllProjects().map((project) => ({
     url: `${baseUrl}/projects/${project.slug}`,
     lastModified,
     changeFrequency: "monthly",
