@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme {
+  --color-livsmart-orange: #E8792E;
+  --color-livsmart-orange-hover: #D0661E;
+  --color-livsmart-charcoal: #191919;
+  --color-livsmart-warm: #F5F3EF;
+  --color-livsmart-stone: #A9A39B;
+  --color-livsmart-white: #FFFFFF;
+
+  --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --brand-orange: #E8792E;
+  --brand-charcoal: #191919;
+  --brand-warm-white: #F5F3EF;
+  --brand-stone-grey: #A9A39B;
+  --brand-white: #FFFFFF;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #F5F3EF;
+  color: #191919;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Subtle architectural blueprint grid background utility */
+.bg-architectural-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(25, 25, 25, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(25, 25, 25, 0.04) 1px, transparent 1px);
+}
+
+.bg-architectural-grid-dark {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+}
+
+/* Visible accessible keyboard focus ring */
+:focus-visible {
+  outline: 2px solid #E8792E;
+  outline-offset: 2px;
+}
